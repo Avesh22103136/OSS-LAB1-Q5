@@ -1,0 +1,82 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+/**
+ * Performs addition of two integers.
+ * @param number_1 First integer operand.
+ * @param number_2 Second integer operand.
+ * @return The sum of number_1 and number_2.
+ */
+int addition(int number_1, int number_2){
+    return number_1 + number_2;
+}
+
+/**
+ * Performs subtraction of two integers.
+ * @param number_1 First integer operand (minuend).
+ * @param number_2 Second integer operand (subtrahend).
+ * @return The result of number_1 minus number_2.
+ */
+int subtraction(int number_1, int number_2){
+    return number_1 - number_2;
+}
+
+/**
+ * Performs multiplication of two integers.
+ * @param number_1 First integer operand.
+ * @param number_2 Second integer operand.
+ * @return The product of number_1 and number_2.
+ */
+int multiplication(int number_1, int number_2){
+    return number_1 * number_2;
+}
+
+/**
+ * Performs integer division of two integers.
+ * @param number_1 Dividend.
+ * @param number_2 Divisor.
+ * @return The integer result of number_1 divided by number_2.
+ * @note This function does not handle division by zero.
+ */
+int division(int number_1, int number_2){
+    return number_1 / number_2;
+}
+
+/**
+ * Reads two integers from user input.
+ * @return One of the integers entered by the user (typically the first one).
+ */
+int get_input(){
+    int number_1, number_2;
+    cout << "Enter two integers: ";
+    cin >> number_1 >> number_2;
+    return number_1; // Returning number_1 as an example
+}
+
+/**
+ * Entry point of the program.
+ * Calls get_input() to obtain two integers, then performs arithmetic operations
+ * using addition(), subtraction(), multiplication(), and division() functions.
+ * Outputs the results of these operations.
+ * @return 0 indicating successful execution.
+ */
+int main(){
+    int number_1, number_2;
+    
+    // Getting input from user
+    number_1 = get_input();
+    
+    // Calling arithmetic functions
+    int sum = addition(number_1, number_2);
+    int diff = subtraction(number_1, number_2);
+    int product = multiplication(number_1, number_2);
+    int quotient = division(number_1, number_2);
+    
+    // Outputting results
+    cout << "Sum: " << sum << endl;
+    cout << "Difference: " << diff << endl;
+    cout << "Product: " << product << endl;
+    cout << "Quotient: " << quotient << endl;
+    
+    return 0;
+}
